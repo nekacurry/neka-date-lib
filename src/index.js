@@ -63,7 +63,36 @@ class D {
   get sec() {
     return this._date.getSeconds()
   }
+
+  format(dateFormat = 'M, D, Y') {
+    const dateDict = {
+      Y: this.year,
+      y: this.yr,
+      M: this.month,
+      m: this.mth,
+      D: this.date,
+      d: this.dt,
+      H: this.hour,
+      h: this.hr,
+      I: this.minute,
+      i: this.min,
+      S: this.second,
+      s: this.sec
+    }
+    let output = ''
+    for (let i = 0; i < dateFormat.length; i++) {
+      if (dateDict[dateFormat[i]] === undefined) {
+        output += dateFormat[i]
+      } else {
+        output += dateDict[dateFormat[i]]
+      }
+    }
+
+  return output
 }
+}
+
+
 
 
 

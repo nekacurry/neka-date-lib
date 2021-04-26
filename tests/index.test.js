@@ -5,6 +5,7 @@ const { months, mons, days, dys } = require('../src/utils')
 const today = new Date()
 const d = new D()
 const bDay = new D('Apr 9, 1998 14:04:01')
+const bDay2 = new D('1998, 4, 9')
 
 test('D.year', () => {
     expect(d.year).toBe(today.getFullYear())
@@ -53,9 +54,13 @@ test('D.min', () => {
 })
 
 test('D.second', () => {
-    expect(d.second).toBe(today.getSeconds())
+    expect(bDay.second).toBe('01')
 })
 
 test('D.sec', () => {
     expect(d.sec).toBe(today.getSeconds())
+})
+
+test('D.format', () => {
+    expect(bDay2.format()).toBe('April, 9, 1998')
 })
