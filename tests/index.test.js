@@ -4,7 +4,7 @@ const { months, mons, days, dys } = require('../src/utils')
 
 const today = new Date()
 const d = new D()
-const bDay = new D(1998, 4, 9)
+const bDay = new D('Apr 9, 1998 14:04:01')
 
 test('D.year', () => {
     expect(d.year).toBe(today.getFullYear())
@@ -17,11 +17,11 @@ test('D.yr', () => {
 })
 
 test('D.month', () => {
-    expect(bDay.month).toBe(months[4])
+    expect(bDay.month).toBe('April')
 })
 
 test('D.mon', () => {
-    expect(bDay.mon).toBe(mons[4])
+    expect(bDay.mon).toBe('Apr')
 })
 
 test('D.day', () => {
@@ -45,7 +45,7 @@ test('D.hr', () => {
 })
 
 test('D.minute', () => {
-    expect(d.minute).toBe(today.getMinutes())
+    expect(bDay.minute).toBe('04')
 })
 
 test('D.min', () => {
