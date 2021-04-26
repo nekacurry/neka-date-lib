@@ -64,3 +64,10 @@ test('D.sec', () => {
 test('D.format', () => {
     expect(bDay2.format()).toBe('April, 9, 1998')
 })
+
+test('D.when', () => {
+    const now = new Date()
+    now.setDate(now.getDate()+4)
+    const fourFromNow = new D(now)
+    expect(fourFromNow.when()).toBe('This is 4 day(s) from now')
+})
