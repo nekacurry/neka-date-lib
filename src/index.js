@@ -116,9 +116,35 @@ class D {
   }
 }
 
-
-
-
+/**
+ * class D create a new date
+ * Year getter
+ * @param {number} @returns the full year
+ * Shortened year getter
+ * @param {number} @returns the last 2 digits of year
+ * Month getter
+ * @param {number} @returns the full month name
+ * Shortened month getter
+ * @param {number} @returns the first 3 letters of month name
+ * Day getter
+ * @param {number} @returns the day of the week as full word
+ * Shortened day getter
+ * @param {number} @returns the first 3 letters of the day word
+ * Date getter
+ * @param {number} @returns the date
+ * Hour getter
+ * @param {number} @returns the hour of the date, padded with 0 if single digit
+ * Shortened hour getter
+ * @param {number} @returns the hour of the date, unpadded
+ * Minute getter
+ * @param {number} @returns the minutes of the date, padded with 0 if single digit
+ * Shortened minute getter
+ * @param {number} @returns the minutes of the date, unpadded
+ * Seconds getter
+ * @param {number} @returns the seconds of the date, padded with 0 if single digit
+ * Shortened seconds getter
+ * @param {number} @returns the seconds of the date, unpadded
+ */
 
 
 
