@@ -5,6 +5,13 @@ class D {
 		this._date = new Date(...args)
 	}
 
+  numPadding(num) {
+    if (num < 10) {
+      num = '0' + num.toString()
+    }
+    return num
+  }
+
   get year() {
     return this._date.getFullYear()
   }
@@ -31,6 +38,30 @@ class D {
 
   get date() {
     return this._date.getDate()
+  }
+
+  get hour() {
+    return this.numPadding(this._date.getHours())
+  }
+
+  get hr() {
+    return this._date.getHours()
+  }
+
+  get minute() {
+    return this.numPadding(this._date.getMinutes())
+  }
+
+  get min() {
+    return this._date.getMinutes()
+  }
+
+  get second() {
+    return this.numPadding(this._date.getSeconds())
+  }
+
+  get sec() {
+    return this._date.getSeconds()
   }
 }
 
