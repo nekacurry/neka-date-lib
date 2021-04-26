@@ -1,14 +1,14 @@
 class D {
 	constructor(...args) {
-		this._date = new Date(...args)
+		this.date = new Date(...args)
 	}
 
-  year() {
+  get year() {
     return this.date.getFullYear()
   }
 
-  yr() {
-    return this.getFullYear() % 100
+  get yr() {
+    return this.date.getFullYear() % 100
   }
 }
 
@@ -20,4 +20,7 @@ class D {
 // console.logs
 
 const d = new D()
-console.log(d.year())
+console.log(d.year)
+console.log(d.yr) 
+
+module.exports = D
